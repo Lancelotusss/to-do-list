@@ -1,0 +1,23 @@
+<div>
+  <form (submit)="addTask()">
+    <input
+      type="text"
+      name="inputtask"
+      placeholder="Enter Task"
+      class="task-input"
+      [(ngModel)]="inputtask"
+    />
+    <input type="submit" value="Add Task" class="task-submit" />
+  </form>
+
+  <div
+    *ngFor="let task of tasks; let i = index"
+    class="task{{ task.completed ? 'done' : 'task' }}"
+  >
+    <div class="task">
+      <div class="id">{{ i + 1 }}</div>
+      <div class="content" (click)="toggleDone(i)">{{ task.task }}</div>
+      <button class="remove" (click)="removeTask(i)">&#x2715;</button>
+    </div>
+  </div>
+</div>

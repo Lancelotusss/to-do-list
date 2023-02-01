@@ -1,0 +1,22 @@
+.task {
+  display: flex;
+  padding: 10px 15px;
+  background-color: blueviolet;
+  border-bottom: 2px solid black;
+}
+.task:nth-child(even){
+  background-color: aquamarine;
+}
+
+.task .id {
+  flex: 1 1 50px
+}
+.task .content{
+  flex: 1 1 100%
+}
+.taskdone .task{
+  background-color: rgb(66, 187, 66);
+}
+.taskdone .content {
+  text-decoration: line-through;
+}
